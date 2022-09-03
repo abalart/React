@@ -1,0 +1,13 @@
+.card{
+    border: 1px solid salmon;
+    display: block;
+    height: 340px;
+    padding: 10px;
+    width: 150px;
+  }
+
+
+  .estiloLinkNavegacion{
+
+    text-decoration: none;
+  }
