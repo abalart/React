@@ -1,4 +1,4 @@
-import './Header.css'
+/*import './Header.css'
 
 
 const categorías = [{Nombre:"Contacto"},
@@ -7,3 +7,4 @@ const categorías = [{Nombre:"Contacto"},
 {Nombre:"Outlet"},
 ]
 
+*/

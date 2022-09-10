@@ -1,4 +1,4 @@
-.card{
+  .card{
     border: 1px solid salmon;
     display: block;
     height: 340px;
@@ -8,13 +8,11 @@
 
 
   .estiloLinkNavegacion{
-
     text-decoration: none;
     list-style: none;
-
   }
 
-.ulEnNav{
+  .ulEnNav{
     display:flex;
     justify-content: space-between;
     border: 1px solid;
@@ -24,3 +22,16 @@
       height: 100px;
       width: 100px;
   }
+
+  .imagenLogoCarrito{
+    flex-direction: column;
+    height: 100px;
+    width: 100px;
+  }
+
+
+  .flexbox{
+    display: flex;
+
+  }
+  
