@@ -24,35 +24,31 @@ debería ver el contador inicializado en 1 por defecto
 */
 
 import React, {useState} from "react";
+// ES6 Modules or TypeScript
+import Swal from 'sweetalert2'
 
-
-const ItemCount = ({stock,initial,onAdd}) => {  
+const ItemCount = ({stock,initial,onAdd}) => {   //Recibe las 3 props desde MiApp
     
     
-console.log(initial);
-console.log(stock);
-    
- 
-
 const [contador,setContador] = useState(initial); //Variable,funcion que va a cambiar la variable y el hook con un valor inicial
 
-const sumar = () => {//Defino un evento que sucedera cada vez que clickeo
-    contador<stock?setContador(contador+1):console.log("No hay stock")
+const agregarProducto = () => {//Defino un evento que sucedera cada vez que clickeo
+    contador<stock?setContador(contador+1): Swal.fire('No hay más stock que el seleccionado')
       //Utilizo el setContador para renderizar el cambio, es un error usar variable ++
 }
 
-const restar = () => { 
+const quitarProducto = () => { 
 
-   contador>0? setContador(contador-1):setContador(0) 
+   contador>0? setContador(contador-1):Swal.fire('El stock no puede ser menor a 0')
 }
 
 
     return(
         <>
-        <div> Contador de productos a comprar </div>
+        <div> Producto </div>
          <h1>{contador}</h1>
-         <button onClick={sumar}> +</button>
-         <button onClick={restar}> - </button>
+         <button onClick={agregarProducto}> +</button>
+         <button onClick={quitarProducto}> - </button>
          <button onClick={onAdd}> Añadir al carrito </button>
         </>
     ) 
