@@ -5,11 +5,17 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import ItemCount from './components/ItemCount/ItemCount';
 
 const  App = () => {
+
+function onAdd(){
+
+  console.log("Producto agregado")
+}
+
   return (
   <>
     <NavBar />
-    <ItemListContainer greeting={"Aqui vamos a agregar el catálogo"}/>
-    <ItemCount/>
+    <ItemCount stock={5} initial={1} onAdd={onAdd} />
+    <ItemListContainer/>
   </> 
   );
 }

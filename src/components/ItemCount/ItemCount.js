@@ -10,6 +10,9 @@ ItemListContainer, sólo a propósitos de prueba. Después lo sacaremos de aquí
 en el detalle del ítem.
 
 >> Ejemplo inicial:
+stock se pasa harcodeado desde el componente padre de itemCount lo mismo initial y OnAdd es una funcion que tambien sera prop
+onAdd=Agregar al carrito , va a ser una funcion que ejecute por ej un console.log
+
 function ItemCount({ stock, initial, onAdd }) {
 // Desarrollar lógica
 }
@@ -23,20 +26,34 @@ debería ver el contador inicializado en 1 por defecto
 import React, {useState} from "react";
 
 
-const ItemCount = () => {     
+const ItemCount = ({stock,initial,onAdd}) => {  
     
-const [contador,setContador] = useState(0); //Variable,funcion que va a cambiar la variable y el hook con un valor inicial
+    
+console.log(initial);
+console.log(stock);
+    
+ 
 
-const handlerClick = () => {//Defino un evento que sucedera cada vez que clickeo
-  
-    setContador(contador+1)  //Utilizo el setContador para renderizar el cambio, es un error usar variable ++
+const [contador,setContador] = useState(initial); //Variable,funcion que va a cambiar la variable y el hook con un valor inicial
+
+const sumar = () => {//Defino un evento que sucedera cada vez que clickeo
+    contador<stock?setContador(contador+1):console.log("No hay stock")
+      //Utilizo el setContador para renderizar el cambio, es un error usar variable ++
 }
+
+const restar = () => { 
+
+   contador>0? setContador(contador-1):setContador(0) 
+}
+
 
     return(
         <>
-        <div> Contador </div>
+        <div> Contador de productos a comprar </div>
          <h1>{contador}</h1>
-         <button onClick={handlerClick}> click me </button>
+         <button onClick={sumar}> +</button>
+         <button onClick={restar}> - </button>
+         <button onClick={onAdd}> Añadir al carrito </button>
         </>
     ) 
 
