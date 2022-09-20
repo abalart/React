@@ -1,29 +1,22 @@
-
-import imgBolsas from '../../imagenes/bolsas.JPG'
 import React from 'react';
 import './Item.css';
 
 
-// { id, title, price, pictureUrl }
-const item = [
-    {id:1, title: "somprero",stock:5,price: 500},
-    {id:2,title: "Aros",stock:0,price: 500},
-    {id:3,title: "Almohadon",stock:0,price: 500}
-                  ]
+/*
+La idea del ItemListContainer es hacer que con la promesa se actualice un estado products y se envíe a ItemList, 
+en ItemList se realiza el map para renderizar cada Item, mandando el primer estado de productos por props.
+ Esto se vió en el after.
+*/
 
-const Item = (item) => {  //Este componente recibe un objeto item para extraer de el la info a mostrar en una card
+
+
+
+const Item = ({product}) => {  //Este componente recibe un objeto item para extraer de el la info a mostrar en una card
     
 
 return(
  
-
-    <div className="card">
-        <img altclassname="Esto es una bolsa" className="imgCard" src={imgBolsas} alt=''  />
-        <div className="container">
-            <p>Title:{item.title}</p>
-          <p>Price:{item.price}</p>
-        </div>
-        </div>
+ <h1>Inserte productos</h1>
     
 ) 
 
