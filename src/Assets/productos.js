@@ -1,28 +1,32 @@
-// { id, title, price, pictureUrl }
+// { id, product, price, pictureUrl }
 export const products = [
 {   
     id:1,
-    title: "somprero",
+    product: "somprero",
     stock:5,
     category: "Ropa",
     price: 500,
-    description:"Es ropa"
+    description:"Sobrero de Indiana",
+    image: "https://http2.mlstatic.com/D_NQ_NP_998111-MLA31133518413_062019-W.webp"
  },
  {   
     id:2,
-    title: "Zapatilla",
+    product: "Bolsas",
     stock:5,
-    category: "Ropa",
+    category: "Accesorios",
     price: 500,
-    description:"Es ropa"
+    description:"Es ropa",
+    image: "https://http2.mlstatic.com/D_NQ_NP_613892-MLA49794588124_042022-V.webp"
+   
  },
  {   
     id:3,
-    title: "Guantes",
+    product: "Guantes",
     stock:5,
     category: "Ropa",
     price: 999,
-    description:"Es ropa"
+    description:"Es ropa",
+    image: "https://http2.mlstatic.com/D_NQ_NP_917740-MLA50135343580_052022-V.webp"
  }
 ]
 

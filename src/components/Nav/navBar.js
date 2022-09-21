@@ -5,6 +5,11 @@ import logo from '../../imagenes/Logo.JPG'
 import 'bootstrap/dist/css/bootstrap.css';
 import CartWidget from '../../components/CartWidget/CartWidget'
 
+const categorias = [
+  {id:0,nombre: 'electronics',ruta: '/categoria/electronics'},
+  {id:1,nombre: 'man clotes', ruta: '/categoria/man-clotes'},
+  {id:1,nombre: 'decorations', ruta: '/categoria/decorations'}
+]
 
  const Nav = () => {  //Declaro un elemento JSX, sera hijo de App o del componente que quiera
     

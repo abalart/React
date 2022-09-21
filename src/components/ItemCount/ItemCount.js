@@ -4,7 +4,7 @@ import Swal from 'sweetalert2'
 const ItemCount = ({stock,initial,onAdd}) => {   //Recibe las 3 props desde ItemListContainer (padre de ItemCount)
     
 useEffect(() => {
-    console.log("Esto es useEffect")
+    //console.log("Esto es useEffect en itemCiunt")
 },[]); 
     
 const [contador,setContador] = useState(initial); //Variable,funcion que va a cambiar la variable y el hook con un valor inicial
@@ -23,7 +23,7 @@ const quitarProducto = () => {
 
     return(
         <>
-        <div> Producto </div>
+         
          <h1>{contador}</h1>
          <button onClick={agregarProducto}> +</button>
          <button onClick={quitarProducto}> - </button>
