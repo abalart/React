@@ -6,11 +6,7 @@ import {Text,Stack} from '@chakra-ui/react'
 
  //Este componente recibe un objeto item para extraer de el la info a mostrar en una card por medio de un map
 
-const ItemList = ({listProducts}) => { 
-    
-
-return(
- <>
+ /*
  <Stack spacing={3}>
     <Text fontSize='50px' color='tomato' textAlign={[ 'left', 'center' ]}
     >
@@ -18,6 +14,13 @@ return(
     </Text>
  </Stack>
   {listProducts.map((prod,i) => <Item key={`${prod.products}-${i}`}  product = {prod}/>)}
+*/
+
+const ItemList = ({listProducts}) => { 
+    
+
+return(
+ <>
 
  </>
 
@@ -26,3 +29,4 @@ return(
 }
 
 export default ItemList
+

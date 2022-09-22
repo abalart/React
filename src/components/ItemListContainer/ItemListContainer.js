@@ -33,7 +33,7 @@ function onAdd(){ //Funcion añadir al carrito
 
     <>
     <div> 
-        <h1>Contenedor de productos</h1>  
+        <h1></h1>  
     <div>
     </div>
             <ItemCount stock={5} initial={1} onAdd={onAdd} />
