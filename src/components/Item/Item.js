@@ -1,9 +1,6 @@
 import React from 'react';
 import {Image,Button,Text,VStack} from '@chakra-ui/react'
  
- 
-
-
 const Item = ({product}) => {  //Este componente recibe un objeto item para extraer de el la info a mostrar en una card
    
  
