@@ -11,7 +11,7 @@ return(
     <Stack spacing={3}>
     <Text fontSize='50px' color='tomato' textAlign={[ 'left', 'center' ]}
     >
-    Lista de productos
+     
     </Text>
  </Stack>
   {listProducts.map((prod,i) => <Item key={`${prod.products}-${i}`}  product = {prod}/>)}

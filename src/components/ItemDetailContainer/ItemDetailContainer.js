@@ -1,6 +1,7 @@
 
 import React, { useEffect, useState } from 'react';
 import ItemDetail from '../ItemDetail/ItemDetail'
+import useParam from 'react-router-dom'
  
 
 const ItemDetailContainer = () => {  //Este componente le pasa a ItemDetails la info de productos por medio del estado SetProducto,
@@ -13,7 +14,7 @@ useEffect( () => {
 
 const getItem = async () => {  //Funcion que obtiene la info de los productos mediante una API
     try{
-    const respuesta = await fetch('https://fakestoreapi.com/products/3')   //Se queda esperando hasta tener la respuesta, recien ahi avanza
+    const respuesta = await fetch('https://fakestoreapi.com/products/6')   //Se queda esperando hasta tener la respuesta, recien ahi avanza
    
     const data = await respuesta.json()
     
@@ -35,8 +36,11 @@ getItem();
 return(
     
     <>
-    
-    <ItemDetail  producto={producto}/> 
+        <div style={{    display: "flex",
+                                 justifyContent: "center"
+                                         }}>
+                <ItemDetail  producto={producto}/> 
+        </div>
     </>
 ) 
 
