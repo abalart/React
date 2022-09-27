@@ -6,7 +6,7 @@ const Item = ({product}) => {  //Este componente recibe un objeto item para extr
  
 return(
   <VStack>  
-    <Text  fontSize='20px'> {product.product} </Text>
+    <Text  fontSize='20px'> {product.title} </Text>
     <Image src={product.image} w="200px" />
     <Button>Ver detalles </Button>
   </VStack> 

@@ -3,23 +3,29 @@ import Item from '../../components/Item/Item'
 import {Stack,Text} from '@chakra-ui/react'
 //Este componente recibe un objeto item para extraer de el la info a mostrar en una card por medio de un map
  
-const ItemList = ({listProducts}) => { 
+const ItemList = ({products}) => { 
     
 
-return(
- <>
-    <Stack spacing={3}>
-    <Text fontSize='50px' color='tomato' textAlign={[ 'left', 'center' ]}
-    >
-     
-    </Text>
- </Stack>
-  {listProducts.map((prod,i) => <Item key={`${prod.products}-${i}`}  product = {prod}/>)}
- </>
-
-) 
+return (
+        <div style={styles.container}>
+            {products.map((product) =>
+                <Item key={product.id} product={product} />
+            )}
+        </div>
+    )
 
 }
 
+const styles = {
+    container:{
+      display: "flex",
+      flexDirection: "row",
+      justifyContent: "space-around",
+      alignItems: "center",
+      flexWrap: "wrap",
+    }
+  }
+
 export default ItemList
+
 

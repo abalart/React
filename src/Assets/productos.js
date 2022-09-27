@@ -1,4 +1,6 @@
 // { id, product, price, pictureUrl }
+
+/*
 export const products = [
 {   
     id:1,
@@ -30,7 +32,7 @@ export const products = [
  }
 ]
 
-/*
+
 
 [
     {
