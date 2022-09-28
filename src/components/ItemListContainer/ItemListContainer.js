@@ -1,5 +1,4 @@
 import React from 'react';   
-import Swal from 'sweetalert2'
 import {products} from '../../Assets/productos' //Traigo los productos a mostrar desde este archivo
 import {useEffect,useState} from 'react'
 import ItemList from '../ItemList/ItemList';
@@ -42,9 +41,7 @@ useEffect(() => {
     getItems();
   }, [id]);
 
-function onAdd(){ //Funcion añadir al carrito
- Swal.fire('Producto agregado al carrito')
-}
+
     return (
     <>
        

@@ -1,6 +1,6 @@
 import React from 'react';
 import Item from '../../components/Item/Item'
-import {Stack,Text} from '@chakra-ui/react'
+ 
 //Este componente recibe un objeto item para extraer de el la info a mostrar en una card por medio de un map
  
 const ItemList = ({products}) => { 
