@@ -10,17 +10,12 @@ import {
   BreadcrumbLink,
   BreadcrumbSeparator,
 } from '@chakra-ui/react'
+import { Nav } from "./Nav/Nav";
 
 
-const categories = [
-  {id:0,title: 'electronics',route: '/categoria/electronics'},
-  {id:1,title: 'man clotes', route: '/categoria/man-clotes'},
-  {id:2,title: 'decorations', route: '/categoria/decorations'},
-  {id:3,title: 'jewelery', route: '/categoria/jewelery'}
-]
 
 
- const NavBar = ({categorias}) => {  //Declaro un elemento JSX, sera hijo de App o del componente que quiera
+ const NavBar = ({categories}) => {  //Declaro un elemento JSX, sera hijo de App o del componente que quiera
     
   return (
       <>
@@ -28,14 +23,7 @@ const categories = [
       <Link to={'/'}>
         <img className="brand-logo center imagenLogo rounded mx-auto d-block" src={logo} ></img>
       </Link>
-      <Breadcrumb>
-        <nav  className="navbar-light bg-light estiloLinkNavegacion">
-        
-            {categories.map((category) => {
-                return <NavLink key={category.id} to={category.route} style={styles.links}>{category.title}</NavLink>
-            })}
-        </nav>
-        </Breadcrumb>
+         <Nav className="navbar-light bg-light estiloLinkNavegacion" categories={categories} />
          <Link to={'cart'}>
             <CartWidget/>
           </Link>

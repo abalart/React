@@ -12,16 +12,15 @@ const ItemListContainer = ({greeting}) => {  //Este componente recibe la prop "g
  //Agregar  llamado a  <ItemList/> mediante una promesa con retraso de 2 segundos+ useEffect
 
 
- let {idCategoria} = useParams();   //Esto provoca que el componente sepa que traer, segun la categoria
    
-const { id } = useParams(); 
+const { id } = useParams();   //Esto provoca que el componente sepa que traer, segun la categoria
 const [products,setProducts]  = useState([])
 const [loading, setLoading] = useState(true)
 const [error, setError] = useState(false);
 
 
-const URL_CATEGORY = 'https://fakestoreapi.com/products/category'
-const BASE = 'https://fakestoreapi.com/products'
+const URL_CATEGORY = 'https://fakestoreapi.com/products/category/'
+const BASE = 'https://fakestoreapi.com/products/'
 
 
 useEffect(() => {
@@ -44,7 +43,7 @@ useEffect(() => {
 
     return (
     <>
-       
+       <h1>{greeting}</h1>
       {loading ? (
         <CircularProgress />
       ) : error ? (
