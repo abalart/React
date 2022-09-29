@@ -18,13 +18,15 @@ const [products,setProducts]  = useState([])
 const [loading, setLoading] = useState(true)
 const [error, setError] = useState(false);
 
+ 
 
 const URL_CATEGORY = 'https://fakestoreapi.com/products/category/'
-const BASE = 'https://fakestoreapi.com/products/'
+const BASE = 'https://fakestoreapi.com/products'
 
 
 useEffect(() => {
     const url = id ? `${URL_CATEGORY}${id}` : BASE;
+    console.log("URL "+url);
     const getItems = async () => {
       try {
         const respuesta = await fetch(url);

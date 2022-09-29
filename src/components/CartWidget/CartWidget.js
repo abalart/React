@@ -5,11 +5,12 @@ import logo_carrito from '../../imagenes/logo-carrito.jpg'
 
 const CartWidget = () => {  
     return(
-     <div  >   
+        <>
+     <div>   
         <img className="brand-logo  imagenLogoCarrito rounded float-end" src={logo_carrito} ></img>
-         
     </div>
-        
+     
+         </>
     )
 
 }

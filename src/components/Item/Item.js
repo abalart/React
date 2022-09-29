@@ -8,6 +8,8 @@ import { Button, CardActionArea, CardActions } from "@mui/material";
 import { Link } from "react-router-dom";
 import ItemCount from '../ItemCount/ItemCount'
 import Swal from 'sweetalert2'
+import '../Item/Item.css'
+
 
  
 const Item = ({product}) => {  //Este componente recibe un objeto product para extraer de el la info a mostrar en una card
@@ -17,7 +19,7 @@ const Item = ({product}) => {  //Este componente recibe un objeto product para e
 }
  
 return (
-    <Card sx={{ maxWidth: 345 }} style={styles.container}>
+    <Card sx={{ maxWidth: 280 }} style={styles.container}>
       <CardActionArea>
         <CardMedia
           component="img"
@@ -53,17 +55,17 @@ return (
 
 const styles = {
   container: {
-    width: window.innerHeight > 900 ? "25%" : "90%",
+    width: window.innerHeight > 900 ? "30%" : "85%",
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
     margin: 20,
-    backgroundColor: "rgba(249, 220, 92, 0.3)",
+    backgroundColor: "grey",
   },
   title: {
     textOverflow: "ellipsis",
     overflow: "hidden",
-    height: 100,
+    height: 80,
   },
 };
 
