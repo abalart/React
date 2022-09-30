@@ -1,7 +1,10 @@
 import React, {useEffect, useState} from "react";
 import Swal from 'sweetalert2'
 
+
 const ItemCount = ({stock,initial,onAdd}) => {   //Recibe las 3 props desde ItemListContainer (padre de ItemCount)
+
+
     
 useEffect(() => {
     //console.log("Esto es useEffect en itemCiunt")
@@ -15,6 +18,8 @@ const agregarProducto = () => {//Defino un evento que sucedera cada vez que clic
       //Utilizo el setContador para renderizar el cambio, es un error usar variable ++
 }
 
+
+//Agregsr link to /cart
 const quitarProducto = () => { 
 
    contador>0? setContador(contador-1):Swal.fire('El stock no puede ser menor a 0')
@@ -23,14 +28,25 @@ const quitarProducto = () => {
 
     return(
         <>
-         
-         <h1>{contador}</h1>
-         <button onClick={agregarProducto}> +</button>
-         <button onClick={quitarProducto}> - </button>
-         <button onClick={onAdd}> Añadir al carrito </button>
+                 <div style={styles.container}>
+                        <button onClick={agregarProducto}> +</button>
+                        <h1>{contador}</h1>
+                        <button onClick={quitarProducto}> - </button>
+                        <button onClick={onAdd}> Añadir al carrito </button>
+                 </div>
+      
         </>
     ) 
 
 }
 
 export default ItemCount 
+
+
+const styles = {
+  container: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+  }}

@@ -6,17 +6,14 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Button, CardActionArea, CardActions } from "@mui/material";
 import { Link } from "react-router-dom";
-import ItemCount from '../ItemCount/ItemCount'
-import Swal from 'sweetalert2'
+
 import '../Item/Item.css'
 
 
  
 const Item = ({product}) => {  //Este componente recibe un objeto product para extraer de el la info a mostrar en una card
    
-  function onAdd(){ //Funcion añadir al carrito
- Swal.fire('Producto agregado al carrito')
-}
+ 
  
 return (
     <Card sx={{ maxWidth: 280 }} style={styles.container}>
@@ -48,7 +45,7 @@ return (
           </Button>
         </Link>
       </CardActions>
-      <ItemCount stock={5} initial={1} onAdd={onAdd} />
+     
     </Card>
   );
 };
