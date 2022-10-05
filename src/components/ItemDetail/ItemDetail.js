@@ -1,10 +1,17 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import {Image,Button,Text,VStack} from '@chakra-ui/react'
 import ItemCount from '../ItemCount/ItemCount'
-import Swal from 'sweetalert2'
-import {Link,NavLink} from 'react-router-dom'
+//
+import {Link} from 'react-router-dom'
+ 
+
+
+
 
 const ItemDetail = ({producto}) => { 
+
+ 
+ 
     
  /*function onAdd(){ //Funcion añadir al carrito
  Swal.fire('Producto agregado al carrito')
