@@ -21,8 +21,7 @@ const  App = () => {
           <Route path='/product/:id' element={ <ItemDetailContainer />}/>
           <Route path='/' element={<Home />}/>
         </Routes>
-    </CartProvider>
-       
+    </CartProvider> 
   </BrowserRouter>
   </> 
   );

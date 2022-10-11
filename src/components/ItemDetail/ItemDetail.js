@@ -1,16 +1,14 @@
-import React, { useState } from "react";
+import React, { useState,useContext } from "react";
 import {Image,Button,Text,VStack} from '@chakra-ui/react'
 import ItemCount from '../ItemCount/ItemCount'
-//
 import {Link} from 'react-router-dom'
+import { useCartContext } from "../../Context/CartContext";
  
-
-
-
+ 
 
 const ItemDetail = ({producto}) => { 
 
- 
+ const {addProduct} = useCartContext()
  
     
  /*function onAdd(){ //Funcion añadir al carrito
@@ -20,10 +18,10 @@ const ItemDetail = ({producto}) => {
 const [isButtonpPressed, setIsButtonpPressed] = useState(false);
 //const { añadir } = useContext(Context);
 
-  const onAdd = (count) => {  //Desafio de eventos
+  const onAdd = (qtyProduct) => {  //Desafio de eventos
     setIsButtonpPressed(true);
+    addProduct(producto,qtyProduct) //qtyProduct es la cantidad a seleccionar por el usuario
     //añadir(producto,count);
-
 
   };
 
