@@ -2,12 +2,13 @@ import React, { useState, useEffect } from "react";
 import { CircularProgress } from "@mui/material";
 import ItemDetail  from "../ItemDetail/ItemDetail"
 import { useParams } from "react-router-dom";
+import { doc, getDoc, collection } from "firebase/firestore";
 
 const ItemDetailContainer = () => {  //Este componente le pasa a ItemDetails la info de productos por medio del estado SetProducto,
     //Primero se obtiene data  del fetch y luego se setea con SetProducto
 
 
-const { id } = useParams();
+  const { id } = useParams();
   const [product, setProduct] = useState({});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);

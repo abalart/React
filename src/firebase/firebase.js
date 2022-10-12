@@ -1,4 +1,4 @@
-// Import the functions you need from the SDKs you need
+// Esta implementación simplifica la inicialización de firebase en toda tu app
 import { initializeApp } from "firebase/app";
 import {getFirestore} from "firebase/firestore";   // iMPORTO esto
 // TODO: Add SDKs for Firebase products that you want to use
