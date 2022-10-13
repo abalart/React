@@ -4,7 +4,7 @@ import {useEffect,useState} from 'react'
 import ItemList from '../ItemList/ItemList';
 import { CircularProgress } from '@mui/material';
 import { useParams } from 'react-router-dom';
-import { db } from "../../firebase/firebase";
+import { db } from "../../firebase/firebase";   //Importo instancia de la BD
 import { getDocs, collection, query, where } from "firebase/firestore";
 
 
@@ -22,16 +22,11 @@ const [loading, setLoading] = useState(true)
 const [error, setError] = useState(false);
 
  
-
-//const URL_CATEGORY = 'https://fakestoreapi.com/products/category/'
-//const BASE = 'https://fakestoreapi.com/products'
-
-
 useEffect(() => {
     const productsCollection = collection(db, "products");
     const q = query(productsCollection, where("category", "==", "jewelery"));
 
-    getDocs(productsCollection)
+    getDocs(productsCollection)  //Usamos getDocs
       .then((data) => {
         const lista = data.docs.map((product) => {
           return {

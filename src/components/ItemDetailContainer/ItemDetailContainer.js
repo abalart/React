@@ -18,7 +18,7 @@ const ItemDetailContainer = () => {  //Este componente le pasa a ItemDetails la 
 useEffect(() => {
     const productCollection = collection(db, "products");
     const refDoc = doc(productCollection, id);
-    getDoc(refDoc)
+    getDoc(refDoc)  //Usamos getDoc
       .then((result) => {
         setProduct({
           id: result.id,

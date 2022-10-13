@@ -2,13 +2,13 @@ import React, { useState,useContext } from "react";
 import {Image,Button,Text,VStack} from '@chakra-ui/react'
 import ItemCount from '../ItemCount/ItemCount'
 import {Link} from 'react-router-dom'
-import { useCartContext } from "../../Context/CartContext";
+import { Context } from "../../Context/CustomProvider";
  
  
 
 const ItemDetail = ({producto}) => { 
 
- const {addProduct} = useCartContext()
+  const { addProduct } = useContext(Context);
  
     
  /*function onAdd(){ //Funcion añadir al carrito
